@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scae:.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            line-height: 1.15;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Roboto", sans-serif;
+            font-size: rem;
+            font-weight: 400;
+            color: #6c757d;
+            text-align: left;
+        }
+
+        .main {
+
+            /* background-image: url("../Tae-2/Assets/Portfolio1.jpg"); */
+            background-image: url("Assets/Portfolio1.jpg");
+            background-size: cover;
+            width: 100%;
+            height: 75vh;
+
+        }
+
+
+        .about h3 {
+            font-size: 31px;
+        }
+
+        .about p {
+            font-size: 17px;
+            color: rgb(182, 169, 169);
+        }
+        .ft {
+            font-size: 4.4rem;
+            font-weight: 700;
+        }
+
+        .small {
+            font-size: 33px;
+
+        }
+
+        .btn {
+            padding: 8px 24px;
+            border-radius: 100px;
+        }
+
+        .btn-white {
+            /* background-color: #ffffff; */
+            border: 2px solid #ffffff;
+            color: rgb(195, 195, 194);
+
+        }
+
+        .btn-blue {
+            background-color: #ffffff;
+            border: 2.4px solid #ffffff;
+        }
+
+        body {
+
+            background-color: rgb(17, 9, 23);
+        }
+
+        .cd {
+            position: absolute;
+
+        }
+
+        .ab {
+            position: relative;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about-image {
+            height: 50vh;
+            width: 100%;
+
+        }
+
+        .service-box {
+           
+            background-color: rgb(46, 30, 46);
+            border-radius: 8px;
+            transition: all .45s ease;
+            padding: 20px 10px;
+
+        }
+
+        
+
+        .s-icons i {
+            font-size: 50px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: white;
+
+        }
+
+        .service-box:hover {
+            transform: translateY(-8px);
+        }
+
+        .service-box h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 5px;
+            text-align: justify;
+        }
+
+        .service-box p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #e8e5e5;
+            margin-bottom: 20px;
+            margin-top: 10px;
+
+        }
+
+        .mrg {
+            margin-top: 30px;
+            margin-left: 20px;
+
+        }
+
+        .skill h6 {
+            color: white;
+        }
+
+
+        .progress-bar {
+
+            /* background-color: rgb(224, 137, 151); */
+            background-color: rgb(161, 95, 223)
+        }
+
+        .img-thumbnail {
+            height: 60vh;
+            /* widte:00%; */
+        }
+
+        .card {
+            background-color: rgb(46, 30, 46);
+        }
+
+        /* Contact-me  */
+        .Contact-me {
+            width: 100%;
+            height: 180px;
+             background-image: url("Assets/Portfolio1.jpg");
+            background-size: cover;
+            /* background-color: rgb(46, 30, 46); */
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .Contact-me p {
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            margin-right: 25px;
+        }
+
+        .Contact-me .button-two {
+            background-color: #f9004d;
+            color: white;
+            text-decoration: none;
+            border: 2px solid transparent;
+            font-weight: bold;
+            padding: 13px 30px;
+            border-radius: 30px;
+            transition: .4s;
+        }
+        
+        .icon 
+        {
+        color: #f9004d ;
+        }
+        .button-pink
+        {
+            background-color: #f9004d;
+            color: white;
+            text-decoration: none;
+            border: 2px solid transparent;
+            font-weight: bold;
+            padding: 13px 22px;
+            border-radius: 30px;
+            transition: .4s; 
+        }
+        .button-one 
+        {
+            background-color: #f9004d;
+            color: white;
+            text-decoration: none;
+            border: 2px solid transparent;
+            font-weight: bold;
+            padding: 13px 30px;
+            border-radius: 30px;
+            transition: .4s;  
+        }
+        .button-three 
+        {
+            background-color: #f9004d;
+            color: white;
+            text-decoration: none;
+            border: 2px solid transparent;
+            font-weight: bold;
+            padding: 13px 30px;
+            border-radius: 30px;
+            transition: .4s; 
+            margin-top: 100px;
+           
+        }
+        .contact-form form input
+        {
+            border:none;
+            outline: none;
+            /* */
+            /* padding: 18px; */
+            background-color: rgb(46, 30, 46);
+            color: rgb(198, 197, 197);
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 0.5rem;
+        }
+        .contact-form form textarea
+        {
+            border:none;
+            outline: none;
+            /* width: 640px; */
+            /* padding: 18px; */
+            background-color: rgb(46, 30, 46);
+            color: rgb(198, 197, 197);
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 0.5rem;
+        }
+
+
+
+        /* Footer Section */
+        footer {
+            position: relative;
+            width: 100%;
+            height: 100px;
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+
+        .end {
+            margin-top: 30px;
+            font-size: 13px;
+        }
+
+        .social {
+            display: flex;
+        }
+
+        .social a {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+        }
+
+
+        /* Media Queries */
+
+        @media (min-width:300px) and (max-width:480px) {
+
+            .about-image {
+                /* margin-left: 55px; */
+                height: 100vh;
+                width: 100%;
+
+            }
+
+            .about .ht {
+                font-size: 22px;
+            }
+
+            .about p {
+                font-size: 12px;
+
+            }
+
+            .mrg {
+                margin-top: -4px;
+                margin-left: 2px;
+            }
+
+            .main {
+
+                background-image: url("Assets/Portfolio1.jpg");
+                background-size: cover;
+                width: 100%;
+                height: 100vh;
+            }
+             .Contact-me {
+            width: 100%;
+            height: 140px;
+            background-image: url("Assets/Portfolio1.jpg");
+            background-size: cover;
+            /* background-color: rgb(46, 30, 46); */
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .Contact-me p {
+            color: white;
+            font-size: 19px;
+            font-weight: bold;
+            margin-right: 24px;
+        }
+
+        .Contact-me .button-two {
+            background-color: #f9004d;
+            color: white;
+            text-decoration: none;
+            border: 2px solid transparent;
+            font-weight: bold;
+            padding: 7px 20px;
+            border-radius: 30px;
+            transition: .4s;
+            margin-right: 36px;
+        }
+       
+
+
+
+        }
+
+        @media (min-width:425px) and (max-width:666px) {
+            .about-image {
+                /* margin-left: 55px; */
+                height: 100vh;
+                width: 100%;
+
+            }
+
+            .about .ht {
+                font-size: 24px;
+            }
+
+            .about p {
+                font-size: 13px;
+
+            }
+
+            .mrg {
+                margin-top: -4px;
+                margin-left: 2px;
+            }
+
+            .main {
+
+                background-image: url("Assets/Portfolio1.jpg");
+                background-size: cover;
+                width: 100%;
+                height: 100vh;
+
+
+
+            }
+            .Contact-me {
+            width: 100%;
+            height: 140px;
+            background-image: url("Assets/Portfolio1.jpg");
+            background-size: cover;
+            /* background-color: rgb(46, 30, 46); */
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .Contact-me p {
+            color: white;
+            font-size: 19px;
+            font-weight: bold;
+            margin-right: 24px;
+        }
+
+        .Contact-me .button-two {
+            background-color: #f9004d;
+            color: white;
+            text-decoration: none;
+            border: 2px solid transparent;
+            font-weight: bold;
+            padding: 7px 20px;
+            border-radius: 30px;
+            transition: .4s;
+            margin-right: 36px;
+        }
+       
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main d-flex py-5 ">
+        <div class="container py-5">
+            <div class="row align-item-center">
+                <div class="col-lg-7   text-lg-left main-text">
+                    <h3 class="text-white font-weight-normal mb-3"> Hello, I'm</h3>
+                    <h1 class="display-3 text-uppercase text-white mb-" style="-webkit-text-stroke: 4px #ffffff;"> Tannu
+                        Kaikade</h3>
+                        <h5 class="type-text-outline d-inline font-weight-lighter text-white mn"> A creative UI/UX
+                            Designer
+                            From Nagpur</h5>
+
+                        <div class="d-flex justify-content-lg-start pt-3">
+                            <a href="" class=" button-one mr-4  text-white" > About Me</a>
+                            <!-- <a href="" class="btn btn-blue btn-outline-warning mr-4 d-none d-sm-block"> about Me </a> -->
+                        </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- About Section -->
+
+    <div class="about py-2 d-flex  ">
+        <div class="container py-5 ">
+            <div class=" position-realtive d-flex ">
+                <h3 class="display-5 pb-5  text-lg-left "
+                    style="-webkit-text-stroke: 1px #dee2e6; color: rgb(56, 14, 56);"> <u> About
+                        Me </u></h3>
+            </div>
+            <div class="row">
+                <div class="col-lg-3  col-12  col-md-3 pb-4 pb-lg-0   pe-lg-0 cl ">
+                    <img class=" img-fluid about-image  " src="Assets/Portfolio6.png" alt="">
+
+                </div>
+                <div class="col-lg-9 ce:2  col-md-9 ">
+                    <div class="mrg">
+                        <h3 class="mb-2 text-white ht ">I'm a UI/Ux Designer</h3>
+                        <p style="text-align: justify; ">Hello I'm a UI/UX designer,and I'm very passionate and dedicated
+                            <br>
+                            to my work.I have acquired the
+                            skills and knowledge necessary <br>to make your project a success.I enjoy every step of the
+                            design <br>
+                            process, from discussion and collaboration.
+                        </p>
+                        <a href="" class="button-three mr-4 mt-5 text-white  " > Download Cv</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----- My Skill---->
+    <!-- <div class="Skill pt-3 mt-3  "> -->
+    <div class="container ">
+        <div class=" position-realtive text-start">
+            <h3 class="display-6 pb-5 " style="-webkit-text-stroke: 1px #dee2e6; color: rgb(56, 14, 56);"> <u> My
+                    Skills </u></h3>
+        </div>
+        <div class="row pg">
+            <div class="col-md-6">
+                <div class="skill mb-4">
+                    <div class="d-flex justify-content-between">
+                        <h6 class="font-width-bold">HTML5</h6>
+                        <h6 class="font-width-bold">95%</h6>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar prg " style="width: 95%;" role="progressbar"></div>
+                    </div>
+
+
+                </div>
+                <div class="skill mb-4">
+                    <div class="d-flex justify-content-between">
+                        <h6 class="font-width-bold">Bootstrap 5</h6>
+                        <h6 class="font-width-bold">85%</h6>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar  " role="progressbar" style="width: 85%;"></div>
+                    </div>
+
+
+                </div>
+                <div class="skill mb-4">
+                    <div class="d-flex justify-content-between">
+                        <h6 class="font-width-bold">C</h6>
+                        <h6 class="font-width-bold">95%</h6>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 85%;">
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="skill mb-4">
+                    <div class="d-flex justify-content-between">
+                        <h6 class="font-width-bold">CSS</h6>
+                        <h6 class="font-width-bold">85%</h6>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 95%;" role="progressbar"></div>
+                    </div>
+
+
+                </div>
+                <div class="skill mb-4">
+                    <div class="d-flex justify-content-between">
+                        <h6 class="font-width-bold">C++</h6>
+                        <h6 class="font-width-bold">95%</h6>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar " style="width: 95%;" role="progressbar"></div>
+                    </div>
+
+
+                </div>
+                <div class="skill mb-4">
+                    <div class="d-flex justify-content-between">
+                        <h6 class="font-width-bold">JavaScript</h6>
+                        <h6 class="font-width-bold">55%</h6>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar " style="width: 55%;" role="progressbar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Service Section -->
+    <div class=" services pt-5">
+        <div class="container">
+            <div class=" position-realtive d-flex">
+                <h3 class="display-6 pb-5 text-lg-left text-start  "
+                    style="-webkit-text-stroke: 1px #dee2e6; color: rgb(56, 14, 56);"> <u> My
+                        Services </u></h3>
+            </div>
+            <div class="row pb-3 pt-2 service-content">
+                <div class=" col-lg-4 col-md-6 mb-4">
+                    <div class="card d-flex mb-2 service-box">
+                        <div class="card-body">
+                            <div class="s-icon  mt-3 d-flex justify-content-center align-item-center"
+                                style="font-size: 30px;color: white;">
+                                <i class='bx bx-laptop'></i>
+                            </div>
+                            <h2 class="card-title  m-3 text-white text-center">Web Design</h2>
+
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-lg-4 col-md-6 mb-4">
+                    <div class="card d-flex mb-2 service-box">
+                        <div class="card-body">
+                            <div class="s-icon mt-3 d-flex justify-content-center align-item-center"
+                                style="font-size: 30px; color: white;">
+                                <i class='bx bx-code-alt'></i>
+                            </div>
+                            <h2 class="card-title font-weight-bold m-3 text-white text-center">UI Design</h2>
+
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-lg-4 col-md-6 mt-1">
+                    <div class="card d-flex mb-2 service-box">
+
+                        <div class="card-body">
+                            <div class="s-icon mt-3 d-flex justify-content-center align-item-center"
+                                style="font-size: 30px; color: white;">
+                                <i class='bx bx-edit-alt'></i>
+                            </div>
+                            <h2 class="card-title font-weight-bold m-3 text-white text-center">Creative Design</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- protfolio Section -->
+    <div class="protfolio pt-3 pb-3" id="protfolio">
+        <div class="container">
+            <div class=" position-realtive d-flex">
+                <h3 class="display-6 pb-5 text-lg-left text-start  "
+                    style="-webkit-text-stroke: 1px #dee2e6; color: rgb(56, 14, 56);"> <u> My Latest Work </u></h3>
+            </div>
+
+            <div class="row protfolio-container">
+                <div class="col-lg-6 col-md-6 mb-4 protfolio-item first">
+                    <div class="protfolio-item mb-2">
+                        <img src="Assets/Portfolio2.PNG" alt="" class="img-thumbnail ">
+                        <h4 class="mt-3 text-white">Mina eCommerce</h4>
+                        <p class="text-white">Mina eCommerce Page Design Using Htm5 CSS3 & Bootstrap5</p>
+
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 mb-4 protfolio-item first">
+                    <div class="protfolio-item mb-2">
+                        <img src="Assets/Portfolio3.PNG" alt="" class="img-thumbnail">
+                        <h3 class="mt-3 text-white">Lars Tornoe</h3>
+                        <p class="text-white">Responsive Lars Tornoe Page Design Using Html5,CSS3 media queries &
+                            Bootstrap5</p>
+
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 mb-4 protfolio-item first">
+                    <div class="protfolio-item mb-2"></div>
+                    <img src="Assets/Portfolio5.PNG" alt="" class="img-thumbnail">
+                    <h3 class="mt-3 text-white">Pizzhut Deal Page</h3>
+                    <p class="text-white">Pizzhut Home Page Using Html5,CSS3 & Bootstrap5</p>
+
+                </div>
+                <div class="col-lg-6 col-md-6 mb-4 protfolio-item first">
+                    <div class="protfolio-item mb-2"></div>
+                    <img src="Assets/Portfolio4.PNG" alt="" class="img-thumbnail">
+                    <h3 class="mt-3 text-white">Pizzhut Home Page</h3>
+                    <p class="text-white">Pizzhut Deal Page Using Html5,CSS3 & Bootstrap5</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section Start -->
+    <div class="contact py-1" id="contact">
+        <div class="container py-4">
+            <div class=" position-realtive d-flex">
+                <h3 class="display-6 pb-5 text-lg-left text-start  "
+                    style="-webkit-text-stroke: 1px #dee2e6; color: rgb(56, 14, 56);"> <u>Contact Me </u></h3>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="contact-item d-flex mb-3">
+                        <div class="icon fs-4">
+                            <i class='bx bx-envelope'></i>
+                        </div>
+                        <div class="text ms-3">
+                            <h3 class="fs-5">Email</h3>
+                            <p class="text-muted">
+                                tannukaikade2003@gmail.com
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contact-item d-flex mb-3">
+                        <div class="icon fs-4">
+                            <i class='bx bxs-phone'></i>
+                        </div>
+                        <div class="text ms-3">
+                            <h3 class="fs-5">Phone</h3>
+                            <p class="text-muted">
+                                7410554117
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contact-item d-flex mb-3">
+                        <div class="icon fs-4">
+                            <i class='bx bxl-facebook-circle'></i>
+                        </div>
+                        <div class="text ms-3">
+                            <h3 class="fs-5">Facebook</h3>
+                            <p class="text-muted">
+                                tannukaikade18@gmail.com
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contact-item d-flex mb-3">
+                        <div class="icon fs-4">
+                            <i class='bx bxl-instagram'></i>
+                        </div>
+                        <div class="text ms-3">
+                            <h3 class="fs-5">Instagram</h3>
+                            <p class="text-muted">
+                                tannukaikade18@gmail.com
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contact-item d-flex mb-3">
+                        <div class="icon fs-4">
+                            <i class='bx bxl-linkedin'></i>
+                        </div>
+                        <div class="text ms-3">
+                            <h3 class="fs-5">Linkdine</h3>
+                            <p class="text-muted">
+                                https://www.linkedin.com/in/tannu-kaikade-615b1a250
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="contact-form">
+                        <form action="">
+                            <div class="class-row">
+                                <div class="col-lg-6 mb-4">
+                                    <input type="text" placeholder="Your Name"
+                                        class="form-control form-control-lg fs-6 border-0 shadow-sm">
+                                </div>
+                                <div class="col-lg-6 mb-4">
+                                    <input type="email" placeholder="Your Email"
+                                        class="form-control form-control-lg fs-6 border-0 shadow-sm">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 mb-4">
+                                    <input type="text" placeholder="Your Name"
+                                        class="form-control form-control-lg fs-6 border-0 shadow-sm">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 mb-4">
+                                    <textarea rows="5" placeholder="Your Message"
+                                        class="form-control form-control-lg fs-6 border-0 shadow-sm"></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 ">
+                                    <button type="submit" class=" button-pink button-outline px-3">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class=" Contact-me d-flex">
+        <p>Let Me Get You beutiful Designs</p>
+        <a href="" class="button-two">Hire Me</a>
+    </div>
+
+
+    <!-- Footer -->
+
+    <footer>
+        <p class="end text-secondary" style="font-size: 13px;">Developed with Love. Made By Tannu @2023 </p>
+
+    </footer>
+
+
+
+
+
+
+</body>
+
+</html>
